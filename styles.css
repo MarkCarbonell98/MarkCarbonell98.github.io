@@ -121,15 +121,32 @@ nav a {
       /* background-color: white; */
 }
 
+
+
 h1 {
       margin-top: 2rem;
       margin-bottom: 4rem;
       padding-top: 3rem;
 }
 
+.container {
+      height: 100vh;
+}
+
 .main p {
       margin: 1rem;
       margin-bottom: 4rem;
+}
+
+#proyect-titel,
+.pamatrans, 
+.Tildea,
+#phone-number {
+      text-align: center;
+}
+
+#phone-number {
+      color: white;
 }
 
 .mainButtons {
@@ -425,7 +442,7 @@ label {
       background-color: white;
       line-height: 40px;
       border-top: none;
-      margin-top: 85px;
+      margin-top: 107px;
       background: -moz-linear-gradient(top, #EEE, #FFF);    
       background: -webkit-linear-gradient(top, #eee, #fff);
       background: -ms-linear-gradient(top, #eee, #fff);

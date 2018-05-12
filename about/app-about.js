@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       let xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
-            if(xhr.readyState == 4 && xhr.status == 200) {
+            if(xhr.readyState == 4 && xhr.status == 200 && JSON.parse(xhr.responseText).contents.quotes[0].quote.length < 81) {
                   document.querySelector("i").innerHTML = JSON.parse(xhr.responseText).contents.quotes[0].quote;
             } else {
                   document.querySelector("i").innerHTML = "Life's a mountain, not a beach";
