@@ -119,6 +119,7 @@ nav a {
       text-align: center;
       color: white;
       /* background-color: white; */
+      width: 100%;
 }
 
 
@@ -145,14 +146,29 @@ h1 {
       text-align: center;
 }
 
+#proyect-titel, 
+.pamatrans, Tildea {
+      display: flex;
+      justify-content: center;
+}
+
+.pamatrans,
+.Tildea {
+      flex-direction: column;
+      width: 100%;
+}
+
+
+
 #phone-number {
       color: white;
+      width: 40%;
 }
 
 .mainButtons {
       display: flex;
-      flex-wrap: nowrap;
       justify-content: center;
+      width: 100%;
 
 }
 
@@ -237,9 +253,13 @@ hr {
       
 }
 
+#sprinter,
+#tildea {
+      width: 50%;
+      height: 42%;
+}
+
 #sprinter {
-      height: 200px;
-      width: 250px;
       transition: transform 1s;
 }
 
@@ -249,12 +269,13 @@ hr {
 
 .tildea {
       margin-top: 3rem;
+      display: flex;
+      justify-content: center;
 }
 
 #tildea {
-      width: 250px;
-      height: 200px;
       border-radius: 4rem;
+      margin: auto;
 }
 
 #proyects p {
@@ -309,8 +330,8 @@ hr {
 }
 
 #profile-pic {
-      height: 200px;
-      width: 200px;
+      height: 275px;
+      width: 275px;
       border-radius: 200px;
       margin: auto;
       margin-bottom: 1rem;
@@ -411,19 +432,28 @@ label {
 
 
 
-#proyects .pamatrans p {
-      margin-left: 3rem;
-      margin-right: 3rem;
-}
+/* #proyects .pamatrans p {
+      margin-left: 2rem;
+      margin-right: 2rem;
+} */
 
-#proyects .Tildea p {
+/* #proyects .Tildea p {
       margin-left: 3rem;
       margin-right: 3rem;
-}
+} */
 
 #contact {
       color: rgba(56, 49, 49, 0.822);
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
+      text-align: center;
+}
+
+
+
+.contactform {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 }
 
 
@@ -494,11 +524,44 @@ h5:hover {
       
 }
 
+@media (max-width: 500px) {
+
+.about {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+}
+
+.Tildea, 
+.pamatrans {
+      width: 100%;
+}
+
+#proyects {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      display: flex;
+      justify-content: center;
+}
+
+#profile-pic {
+      height: 225px;
+      width: 225px;
+
+}
+
+.Tildea, 
+.pamatrans {
+      display: flex;
+      justify-content: center;
+}
+}
+
 @media (min-width: 770px) {
 .about {
       flex-direction: row;
       justify-content: space-around;
       align-content: stretch;
+      
 }
 
 .personal,

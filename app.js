@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
       const span = document.getElementById('copied');
       const phoneNumber = document.getElementById('phone-number');
       const submit = document.getElementsByClassName('send')[0];
+      const nav = document.getElementsByClassName('navbar')[0];
+      const container = document.getElementsByClassName('container')[0];
       let text = '+49(176)61256323';
       
       
@@ -18,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
       
       
       window.addEventListener('resize', function() {
-            
             if(window.innerWidth < 500) {    
                   links.style.display = "none";
                   toggler.style.display = "flex";
@@ -27,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function() {
                   toggler.style.display = "none";
             }
       });
+
       window.addEventListener('DOMContentLoaded', function() {
+            fadeIn(nav, 250, 'flex');
+            fadeIn(container, 400, 'block');
             if(window.innerWidth < 500) {    
                   links.style.display = "none";
                   toggler.style.display = "flex";
@@ -90,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 70);
       }
       
-      function fadeIn(el) {
+      function fadeIn(el, time, display) {
             var op = 0;
             el.style.opacity = op;
             var timer = setInterval(function () {
@@ -99,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function() {
                   }
                   el.style.opacity = op;
                   op = op + 0.1;
-            }, 70);
-            el.style.display = 'inline-block';
+            }, time);
+            el.style.display = display;
       }
       
       phoneNumber.addEventListener('click', function(e) {
@@ -122,20 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
             phoneNumber.scrollIntoView({
                   block: 'center'
             });
-            fadeIn(span);
+            fadeIn(span, 100, 'inline-block');
             fadeOut(span);
       });
-
-      // let xhr = new XMLHttpRequest();
-      // submit.addEventListener('submit', function() {
-      //       xhr.onreadystatechange = function() {
-      //             if(xhr.readyState == 4 && xhr.status == 200) {
-      //                   console.log('enviado');
-      //             }
-      //       }
-      // })
-      // xhr.open('POST', 'markcarbonell2013@gmail.com');
-      // xhr.send();
-      
-      
 });
